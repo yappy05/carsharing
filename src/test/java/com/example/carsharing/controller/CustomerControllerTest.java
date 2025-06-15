@@ -38,5 +38,6 @@ public class CustomerControllerTest {
 
         List<Customer> customers = customerController.readAllCustomers();
         assertEquals(2, customers.size());
+        assertEquals("Sergey", customers.get(0).getName());
     }
 }

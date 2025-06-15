@@ -19,15 +19,15 @@ public class CustomerController {
         return service.readAllCustomer();
     }
     @PostMapping("")
-    public Customer createCustomer(Customer customer){
+    public Customer createCustomer(@RequestBody Customer customer){
         return service.createCustomer(customer);
     }
     @PutMapping("")
-    public Customer updateCustomer(Customer customer){
+    public Customer updateCustomer(@RequestBody Customer customer){
         return service.updateCustomer(customer);
     }
-    @DeleteMapping("/{id}")
-    public HttpStatus deleteCustomer(Long id){
+    @DeleteMapping("/delete/{id}")
+    public HttpStatus deleteCustomer(@PathVariable Long id){
         service.deleteCustomer(id);
         return HttpStatus.OK;
     }
