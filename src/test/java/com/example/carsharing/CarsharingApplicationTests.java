@@ -10,7 +10,7 @@ class CarsharingApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertNotEquals(1, 1, "1 не должно быть равно 0");
+		assertNotEquals(1, 0, "1 не должно быть равно 0");
 	}
 
 }
