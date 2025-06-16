@@ -5,13 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 @Data
 @Entity
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long carId;
     private String brend;
     private String model;
@@ -27,3 +30,4 @@ public class Car {
     @Column(nullable = false)
     private boolean isBooking;
 }
+
