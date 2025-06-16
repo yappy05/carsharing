@@ -34,3 +34,4 @@ public class RoadTrip {
     @Column (nullable = false)
     private boolean hasTrafficViolations;
 }
+
