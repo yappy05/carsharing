@@ -1,32 +1,37 @@
 package com.example.carsharing.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.criteria.CriteriaBuilder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-
-@Entity
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@Entity
 public class RoadTrip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long roadTripId;
+    private Long roadId;
 
     @ManyToOne
+    @JoinColumn(name = "car_id")
     private Customer customer;
 
     @ManyToOne
+    @JoinColumn(name = "id")
     private Car car;
 
     private Integer distance;
-    private Date time;
+    private String time;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
     private Integer amount;
     private Integer fuel;
     private Integer avgSpeed;
+    @Column (nullable = false)
     private boolean hasTrafficViolations;
 }
+

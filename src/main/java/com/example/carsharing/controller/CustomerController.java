@@ -31,4 +31,9 @@ public class CustomerController {
         service.deleteCustomer(id);
         return HttpStatus.OK;
     }
+    @DeleteMapping("/delete")
+    public HttpStatus deleteAllCustomers(){
+        service.deleteAllCustomers();
+        return HttpStatus.OK;
+    }
 }

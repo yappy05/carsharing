@@ -14,21 +14,17 @@ import java.util.List;
 @AllArgsConstructor
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long customerId;
-
     private String name;
-    private String lastname;
+    private String lastName;
     private String login;
     private String password;
-    private String address;
-
-    @Column(name = "is_subscribe", nullable = false, columnDefinition = "boolean default false")
-    private boolean isSubscribe;
-
-    @Column(name = "has_driving_license", nullable = false, columnDefinition = "boolean default false")
-    private boolean hasDrivingLicense;
-
+    private String adress;
     private Integer drivingExperience;
+    @Column(nullable = false)
+    private boolean isSubscribe;
+    @Column(nullable = false)
+    private boolean hasDrivingLicense;
 }
 

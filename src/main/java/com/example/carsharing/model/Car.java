@@ -5,35 +5,29 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
 
-@Entity
 @Data
+@Entity
+
 @NoArgsConstructor
 @AllArgsConstructor
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer cardId;
 
-    private String brand;
+    private Long carId;
+    private String brend;
     private String model;
-    private String speed;
-    private String mileage;
-
-    @Column(name = "license_plate")
-    private String licensePlate;
-
-    @Column(name = "fuel_consumption")
+    private Integer speed;        // Изменено на Integer
+    private Integer mileage;      // Исправлено написание
+    private String licensePlate;  // Исправлено написание
     private Integer fuelConsumption;
-
-    @Column(name = "price_per_minute")
     private Integer pricePerMinute;
-
     private String maintenance;
     private String location;
-    private String carClass;
+    private String levelcomfort;
 
-    @Column(name = "is_booking")
+    @Column(nullable = false)
     private boolean isBooking;
 }
+
