@@ -42,10 +42,7 @@ jobs:
     - name: Build and test with Gradle
       run: ./gradlew build
       env:
-        SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/app_ci_test
-        SPRING_DATASOURCE_USERNAME: ci_user
-        SPRING_DATASOURCE_PASSWORD: ci_password_123!
-        SPRING_JPA_HIBERNATE_DDL_AUTO: update
+        SPRING_PROFILES_ACTIVE: test
     
     - name: Upload test results
       if: always()
