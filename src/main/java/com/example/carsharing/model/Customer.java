@@ -14,7 +14,7 @@ import java.util.List;
 public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    private Long customerId;
     private String name;
     private String lastName;
     private String login;
