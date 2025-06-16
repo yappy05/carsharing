@@ -22,8 +22,13 @@ public class Customer {
     private String login;
     private String password;
     private String address;
+
+    @Column(name = "is_subscribe", nullable = false, columnDefinition = "boolean default false")
     private boolean isSubscribe;
+
+    @Column(name = "has_driving_license", nullable = false, columnDefinition = "boolean default false")
     private boolean hasDrivingLicense;
+
     private Integer drivingExperience;
 }
 

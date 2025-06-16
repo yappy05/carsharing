@@ -28,11 +28,11 @@ public class CustomerControllerTest {
     public void testReadAllCustomers(){
         Customer customer1 = new Customer();
         customer1.setName("Sergey");
-        customer1.setId(1L);
+        customer1.setCustomerId(1L);
 
         Customer customer2 = new Customer();
         customer2.setName("Kirill");
-        customer2.setId(2L);
+        customer2.setCustomerId(2L);
 
         when(customerService.readAllCustomer()).thenReturn(Arrays.asList(customer1, customer2));
 

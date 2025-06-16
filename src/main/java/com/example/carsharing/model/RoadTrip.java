@@ -5,11 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.smartcardio.Card;
 import java.util.Date;
 
+
 @Entity
-@Table(name = "road_trip")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,7 +21,7 @@ public class RoadTrip {
     private Customer customer;
 
     @ManyToOne
-    private Card card;
+    private Car car;
 
     private Integer distance;
     private Date time;
